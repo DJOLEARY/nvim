@@ -38,7 +38,7 @@ vim.keymap.set('n', '<leader>Y', '\"+Y')
 vim.keymap.set({'n', 'v'}, '<leader>d', '\"_d')
 
 -- Call LSP format
-vim.keymap.set('n', '<leader>f',':Format')
+vim.keymap.set('n', '<leader>f', ':Format')
 
 -- Quickfix list
 vim.keymap.set('n', '<C-k>', '<cmd>cnext<CR>zz')
