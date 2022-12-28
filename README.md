@@ -4,13 +4,13 @@
 
 1. Download [neovim](https://github.com/neovim/neovim)
 
-  - You may need to add neovim to PATH
+    - You may need to add neovim to PATH
 
 2. Download [neovide](https://github.com/neovide/neovide)
 
 3. Pull this repository as:
-  - Windows: `C:/Users/<user>/AppData/Local/nvim`
-  - Unix: `~/.config/nvim`
+    - Windows: `C:/Users/<user>/AppData/Local/nvim`
+    - Unix: `~/.config/nvim`
 
 ## Extras
 
