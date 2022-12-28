@@ -34,6 +34,12 @@ vim.opt.colorcolumn = {
 -- Enable break indent
 vim.o.breakindent = true
 
+-- Disable swap files
+vim.opt.swapfile = false
+
+-- Disable backup files
+vim.opt.backup = false
+
 -- Save undo history
 vim.o.undofile = true
 
