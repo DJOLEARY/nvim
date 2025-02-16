@@ -1,7 +1,6 @@
 return {
   {
     "mbbill/undotree",
-    opts = {},
     keys = {
       {
         "<leader>u",
@@ -9,5 +8,6 @@ return {
         desc = "[U]ndotree",
       },
     },
+    opts = {},
   }
 }
