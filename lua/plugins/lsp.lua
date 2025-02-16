@@ -24,9 +24,8 @@ return {
         lua_ls = {},
         nil_ls = {},
         ocamllsp = {},
-        rust_analyzer = {},
         yamlls = {},
-      }
+      },
     },
     config = function(_, opts)
       local lsp = require("lspconfig")
@@ -39,7 +38,9 @@ return {
       vim.api.nvim_create_autocmd("LspAttach", {
         callback = function(args)
           local client = vim.lsp.get_client_by_id(args.data.client_id)
-          if not client then return end
+          if not client then
+            return
+          end
 
           local telescope = require("telescope.builtin")
 
@@ -74,5 +75,5 @@ return {
   },
   {
     "mrcjkb/rustaceanvim",
-  }
+  },
 }

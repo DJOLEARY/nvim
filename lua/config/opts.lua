@@ -24,8 +24,8 @@ vim.opt.scrolloff = 999
 
 -- Editor columns
 vim.opt.colorcolumn = {
-    "80",
-    "100"
+  "80",
+  "100",
 }
 
 -- Enable break indent
@@ -56,10 +56,10 @@ vim.o.termguicolors = true
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = "menuone,noselect"
 
--- 
+--
 vim.opt.list = true
-vim.opt.listchars:append "space:⋅"
-vim.opt.listchars:append "eol:↴"
+vim.opt.listchars:append("space:⋅")
+vim.opt.listchars:append("eol:↴")
 
 -- NetRW Settings
 vim.g.netrw_browse_split = 0

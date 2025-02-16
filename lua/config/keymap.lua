@@ -8,11 +8,26 @@ vim.g.maplocalleader = "\\"
 
 -- Keymaps for better default experience
 
-vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true, desc = "Set <Space> to a <Nop> so it can be used as the leader" })
+vim.keymap.set(
+  { "n", "v" },
+  "<Space>",
+  "<Nop>",
+  { silent = true, desc = "Set <Space> to a <Nop> so it can be used as the leader" }
+)
 vim.keymap.set({ "n", "v" }, "Q", "<Nop>", { silent = true, desc = "Set Q to a <Nop> to prevent exiting by accident" })
 
-vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true, desc = "Treat wrapped lines as single lines when moving upwards" })
-vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true, desc = "Treat wrapped lines as single lines when moving downwards" })
+vim.keymap.set(
+  "n",
+  "k",
+  "v:count == 0 ? 'gk' : 'k'",
+  { expr = true, silent = true, desc = "Treat wrapped lines as single lines when moving upwards" }
+)
+vim.keymap.set(
+  "n",
+  "j",
+  "v:count == 0 ? 'gj' : 'j'",
+  { expr = true, silent = true, desc = "Treat wrapped lines as single lines when moving downwards" }
+)
 
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 

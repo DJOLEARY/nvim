@@ -10,7 +10,7 @@ return {
         blink_cmp = true,
         harpoon = true,
         lsp_trouble = true,
-      }
-    }
-  }
+      },
+    },
+  },
 }

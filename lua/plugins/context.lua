@@ -4,5 +4,5 @@ return {
     opts = {
       max_lines = 10,
     },
-  }
+  },
 }
