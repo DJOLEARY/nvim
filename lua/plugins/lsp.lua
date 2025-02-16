@@ -43,9 +43,7 @@ return {
 
           local telescope = require("telescope.builtin")
 
-          if client.supports_method("textDocument/formatting") then
-            vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, { desc = "[F]ormat" })
-          end
+          -- Formatting handled by conform.nvim
 
           if client.supports_method("textDocument/codeAction") then
             vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "[C]ode [A]ction" })
