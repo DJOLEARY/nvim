@@ -31,6 +31,7 @@ return {
           },
         },
       },
+      disable_frontmatter = true
     },
     config = function(_, opts)
       require("obsidian").setup(opts)
