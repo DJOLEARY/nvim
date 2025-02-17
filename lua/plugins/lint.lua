@@ -9,6 +9,14 @@ return {
         php = { "phpstan" },
         rust = { "clippy" },
       },
+      linter_args = {
+        phpstan = {
+          "analyze",
+          "--error-format=json",
+          "--level=8",
+          "--no-progress",
+        },
+      },
     },
     config = function(_, opts)
       local lint = require("lint")
@@ -20,6 +28,10 @@ return {
           lint.try_lint()
         end,
       })
+
+      for linter, args in pairs(opts.linter_args) do
+        lint.linters[linter].args = args
+      end
     end,
   },
 }

@@ -20,7 +20,15 @@ return {
       servers = {
         gopls = {},
         helm_ls = {},
-        intelephense = {},
+        intelephense = {
+          settings = {
+            intelephense = {
+              environment = {
+                phpVersion = "8.0.29",
+              },
+            },
+          },
+        },
         lua_ls = {},
         nil_ls = {},
         ocamllsp = {},
