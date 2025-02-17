@@ -7,28 +7,28 @@ return {
         function()
           require("dap").continue()
         end,
-        desc = "[D]ebug []",
+        desc = "Debug Continue/Start",
       },
       {
         "<F10>",
         function()
           require("dap").step_over()
         end,
-        desc = "[D]ebug []",
+        desc = "Debug Step Over",
       },
       {
         "<F11>",
         function()
           require("dap").step_into()
         end,
-        desc = "[D]ebug []",
+        desc = "Debug Step Into",
       },
       {
         "<F12>",
         function()
           require("dap").step_out()
         end,
-        desc = "[D]ebug []",
+        desc = "Debug Step Out",
       },
       {
         "<Leader>db",
@@ -98,31 +98,16 @@ return {
     },
     opts = {
       adapters = {
-        ocamlearlybird = {
-          type = "executable",
-          command = "ocamlearlybird",
-          args = { "debug" },
-        },
         codelldb = {
-          type = "executable",
-          command = "codelldb",
+          type = "server",
+          port = "${port}",
+          executable = {
+            command = "codelldb",
+            args = { "--port", "${port}" },
+          },
         },
       },
       configs_by_ft = {
-        ocaml = {
-          {
-            name = "OCaml Debug test.bc",
-            type = "ocamlearlybird",
-            request = "launch",
-            program = "${workspaceFolder}/_build/default/test/test.bc",
-          },
-          {
-            name = "OCaml Debug main.bc",
-            type = "ocamlearlybird",
-            request = "launch",
-            program = "${workspaceFolder}/_build/default/bin/main.bc",
-          },
-        },
         rust = {
           {
             name = "Launch file",
@@ -156,8 +141,11 @@ return {
       "nvim-neotest/nvim-nio",
     },
     opts = {},
-    config = function()
+    config = function(_, opts)
       local dap, dapui = require("dap"), require("dapui")
+
+      dapui.setup(opts)
+
       dap.listeners.before.attach.dapui_config = function()
         dapui.open()
       end
@@ -174,6 +162,9 @@ return {
   },
   {
     "leoluz/nvim-dap-go",
+    dependencies = {
+      "mfussenegger/nvim-dap",
+    },
     ft = "go",
     keys = {
       {
