@@ -41,6 +41,11 @@ return {
       vim.keymap.set("n", "<leader>sgs", builtins.git_status, { desc = "[S]earch [G]it [S]tatus" })
       vim.keymap.set("n", "<leader>sh", builtins.help_tags, { desc = "[S]earch [H]elp" })
       vim.keymap.set("n", "<leader>sk", builtins.keymaps, { desc = "[S]earch [K]eymaps" })
+      vim.keymap.set("n", "<leader>so", function()
+        builtins.find_files({
+          cwd = "~/personal/idle_thoughts",
+        })
+      end, { desc = "[S]earch [O]bsidian" })
       vim.keymap.set("n", "<leader>ss", builtins.live_grep, { desc = "[S]earch [S]tring" })
     end,
   },
