@@ -11,6 +11,9 @@ return {
       },
     },
     opts = {
+      window = {
+        width = 100,
+      },
       plugins = {
         options = {
           laststatus = 3,
