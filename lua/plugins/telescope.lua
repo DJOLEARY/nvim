@@ -8,14 +8,11 @@ return {
     },
     opts = {
       pickers = {
-        find_files = {
-          theme = "ivy",
-        },
         live_grep = {
           theme = "ivy",
         },
-        buffers = {
-          theme = "dropdown",
+        grep_string = {
+          theme = "ivy",
         },
         help_tags = {
           theme = "ivy",
@@ -25,8 +22,10 @@ return {
         fzf = {},
       },
     },
-    config = function()
-      require("telescope").load_extension("fzf")
+    config = function(_, opts)
+      local telescope = require("telescope")
+      telescope.setup(opts)
+      telescope.load_extension("fzf")
 
       local builtins = require("telescope.builtin")
 
@@ -46,6 +45,7 @@ return {
         })
       end, { desc = "[S]earch [O]bsidian" })
       vim.keymap.set("n", "<leader>ss", builtins.live_grep, { desc = "[S]earch [S]tring" })
+      vim.keymap.set("n", "<leader>sw", builtins.grep_string, { desc = "[S]earch [W]ord" })
     end,
   },
 }
