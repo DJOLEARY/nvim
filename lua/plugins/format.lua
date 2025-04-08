@@ -23,6 +23,7 @@ return {
         php = { "php_cs_fixer" },
         rust = { "rustfmt" },
         yaml = { "yq" },
+        blade = { "blade-formatter" },
         ["_"] = { "trim_whitespace", "trim_newlines" },
       },
       default_format_opts = {
