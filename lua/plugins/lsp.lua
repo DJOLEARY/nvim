@@ -55,27 +55,27 @@ return {
 
           -- Formatting handled by conform.nvim
 
-          if client.supports_method("textDocument/codeAction") then
+          if client:supports_method("textDocument/codeAction") then
             vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "[C]ode [A]ction" })
           end
 
-          if client.supports_method("textDocument/rename") then
+          if client:supports_method("textDocument/rename") then
             vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "[R]e[n]ame" })
           end
 
-          if client.supports_method("textDocument/definition") then
+          if client:supports_method("textDocument/definition") then
             vim.keymap.set("n", "gd", telescope.lsp_definitions, { desc = "[G]o to [D]efinition" })
           end
 
-          if client.supports_method("textDocument/references") then
+          if client:supports_method("textDocument/references") then
             vim.keymap.set("n", "gr", telescope.lsp_references, { desc = "[G]o to [R]eferences" })
           end
 
-          if client.supports_method("textDocument/implementation") then
+          if client:supports_method("textDocument/implementation") then
             vim.keymap.set("n", "gI", telescope.lsp_implementations, { desc = "[G]o to [I]mplementations" })
           end
 
-          if client.supports_method("textDocument/prepareTypeHierarchy") then
+          if client:supports_method("textDocument/prepareTypeHierarchy") then
             vim.keymap.set("n", "<leader>th", vim.lsp.buf.typehierarchy, { desc = "[T]ype[H]ierarchy" })
           end
         end,
