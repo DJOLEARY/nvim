@@ -140,7 +140,6 @@ return {
       "mfussenegger/nvim-dap",
       "nvim-neotest/nvim-nio",
     },
-    opts = {},
     config = function(_, opts)
       local dap, dapui = require("dap"), require("dapui")
 
