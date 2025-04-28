@@ -29,7 +29,7 @@ return {
         end,
       })
 
-      for linter, args in pairs(opts.linter_args) do
+      for linter, args in ipairs(opts.linter_args) do
         lint.linters[linter].args = args
       end
     end,

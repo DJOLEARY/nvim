@@ -125,11 +125,11 @@ return {
     config = function(_, opts)
       local dap = require("dap")
 
-      for adapter, adapterConfig in pairs(opts.adapters) do
+      for adapter, adapterConfig in ipairs(opts.adapters) do
         dap.adapters[adapter] = adapterConfig
       end
 
-      for filetype, filetypeConfig in pairs(opts.configs_by_ft) do
+      for filetype, filetypeConfig in ipairs(opts.configs_by_ft) do
         dap.configurations[filetype] = filetypeConfig
       end
     end,

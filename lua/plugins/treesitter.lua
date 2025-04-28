@@ -61,7 +61,7 @@ return {
       require("nvim-treesitter.configs").setup(opts)
 
       local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
-      for k, v in pairs(opts.parser_configs) do
+      for k, v in ipairs(opts.parser_configs) do
         if v.install_info then
           parser_config[k] = {
             install_info = v.install_info,
