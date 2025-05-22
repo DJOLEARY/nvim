@@ -1,0 +1,23 @@
+{
+  "cardmarket-php-file-template": {
+    "prefix": "cmphp",
+    "body": [
+      "<?php",
+      "",
+      "declare(strict_types=1);",
+      "",
+      "namespace ${RELATIVE_FILEPATH/([\\/\\\\][CIT]?[A-Z][A-Za-z0-9]+\\.php)|(Classes[\\/\\\\])|([\\/\\\\])|([A-Za-z0-9]*)/${3:+\\\\}$4/g};",
+      "",
+      "/**",
+      " * Cardmarket (https://www.cardmarket.com)",
+      " *",
+      " * @copyright Copyright (c) $CURRENT_YEAR, Sammelkartenmarkt GmbH & Co. KG",
+      " */",
+      "${TM_FILENAME_BASE/^(C[A-Z]).*|^(I[A-Z]).*|^(T[A-Z]).*|^(.*)$/${1:+class}${2:+interface}${3:+trait}${4:+class}/} ${TM_FILENAME_BASE/^[CIT]([A-Z].*$)|^(.*)$/$1$2/}",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "Boilerplate for CM PHP Files"
+  }
+}
