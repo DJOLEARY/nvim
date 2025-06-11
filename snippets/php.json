@@ -18,6 +18,7 @@
       "\t$0",
       "}"
     ],
-    "description": "Boilerplate for CM PHP Files"
+    "description": "Boilerplate for CM PHP Files",
+    "isFileTemplate": true
   }
 }
