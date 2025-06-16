@@ -14,13 +14,14 @@ return {
     ---@type conform.setupOpts
     opts = {
       formatters_by_ft = {
-        go = { "goimports", "gofmt" },
+        clojure = { "cljfmt" },
+        go = { "goimports", "gofmt", "gofumpt", "golangci-lint" },
         javascript = { "prettier" },
         json = { "jq" },
         lua = { "stylua" },
         nix = { "nixfmt" },
         ocaml = { "ocamlformat" },
-        php = { "php_cs_fixer" },
+        php = { "php_cs_fixer", "pint" },
         rust = { "rustfmt" },
         yaml = { "yq" },
         blade = { "blade-formatter" },

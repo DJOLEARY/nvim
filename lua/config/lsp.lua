@@ -1,4 +1,5 @@
 local servers = {
+  "clojure_lsp",
   "gopls",
   "helm_ls",
   "intelephense",
